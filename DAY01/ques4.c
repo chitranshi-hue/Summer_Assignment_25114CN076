@@ -1,18 +1,20 @@
 #include <stdio.h>
 
 int main() {
-    int num, rev = 0, digit;
+    int num, count = 0;
 
+    // Input number
     printf("Enter a number: ");
     scanf("%d", &num);
 
+    // Count digits
     while(num != 0) {
-        digit = num % 10;
-        rev = rev * 10 + digit;
         num = num / 10;
+        count++;
     }
 
-    printf("Reversed number = %d\n", rev);
+    // Display result
+    printf("Number of digits = %d\n", count);
 
     return 0;
 }
